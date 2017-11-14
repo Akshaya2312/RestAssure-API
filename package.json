@@ -1,0 +1,22 @@
+{
+  "name": "Voiceworksdemo",
+  "version": "0.0.1",
+  "main": "nightwatch.conf.js",
+  "dependencies": {
+    "chromedriver": "^2.31.0",
+    "cucumber": "^3.0.3",
+    "cucumber-html-reporter": "^3.0.4",
+    "geckodriver": "^1.8.1",
+    "nightwatch": "^0.9.16",
+    "nightwatch-cucumber": "^8.2.2",
+    "phantomjs-prebuilt": "^2.1.15",
+    "selenium-server": "^3.5.0"
+  },
+
+  "scripts": {
+    "test": "nightwatch",
+    "posttest": "node createHtmlReports.js",
+    "test:chrome": "nightwatch --env chrome",
+    "test:firefox": "npm run test -- --env firefox"
+  }
+}
